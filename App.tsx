@@ -14,7 +14,7 @@ const App = () => {
       <View style={[styles.container]}>
         <TouchableOpacity>
           <View style={styles.actionBtn}>
-            <Text>Press Me</Text>
+            <Text style={styles.actionBtnTxt}>Press Me</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -35,5 +35,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#6a1b4d',
     paddingVertical: 10,
     paddingHorizontal: 40,
+  },
+  actionBtnTxt: {
+    fontSize: 24,
+    color: '#fff',
+    textTransform: 'uppercase',
   },
 });
