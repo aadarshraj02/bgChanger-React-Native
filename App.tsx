@@ -1,10 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 
 const App = () => {
   return (
     <View>
-      <Text>App</Text>
+      <StatusBar backgroundColor={'#000'} />
+      <View>
+        <TouchableOpacity>
+          <View>
+            <Text>Press Me</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
