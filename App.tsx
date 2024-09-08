@@ -21,7 +21,7 @@ const App = (): JSX.Element => {
   };
 
   return (
-    <View>
+    <View style={styles.outerContainer}>
       <StatusBar backgroundColor={randomBackground} />
       <View style={[styles.container, {backgroundColor: randomBackground}]}>
         <TouchableOpacity onPress={generateColor}>
@@ -37,6 +37,9 @@ const App = (): JSX.Element => {
 export default App;
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     alignItems: 'center',
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#6a1b4d',
     paddingVertical: 10,
     paddingHorizontal: 40,
+    cursor: 'pointer',
   },
   actionBtnTxt: {
     fontSize: 24,
