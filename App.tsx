@@ -13,7 +13,7 @@ const App = () => {
       <StatusBar backgroundColor={'#000'} />
       <View style={[styles.container]}>
         <TouchableOpacity>
-          <View>
+          <View style={styles.actionBtn}>
             <Text>Press Me</Text>
           </View>
         </TouchableOpacity>
@@ -29,5 +29,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  actionBtn: {
+    borderRadius: 12,
+    backgroundColor: '#6a1b4d',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
   },
 });
