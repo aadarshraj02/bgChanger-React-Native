@@ -5,12 +5,24 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
-const App = () => {
+const App = (): JSX.Element => {
+  const [randomBackground, setRandomBackground] = useState<string>('#ffffff');
+
+  const generateColor = () => {
+    const hexRange = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+      color += hexRange[Math.floor(Math.random() * 16)];
+    }
+    setRandomBackground(color);
+  };
+
   return (
     <View>
-      <StatusBar backgroundColor={'#000'} />
+      <StatusBar backgroundColor={'#000000'} />
       <View style={[styles.container]}>
         <TouchableOpacity>
           <View style={styles.actionBtn}>
