@@ -22,9 +22,9 @@ const App = (): JSX.Element => {
 
   return (
     <View>
-      <StatusBar backgroundColor={'#000000'} />
-      <View style={[styles.container]}>
-        <TouchableOpacity>
+      <StatusBar backgroundColor={randomBackground} />
+      <View style={[styles.container, {backgroundColor: randomBackground}]}>
+        <TouchableOpacity onPress={generateColor}>
           <View style={styles.actionBtn}>
             <Text style={styles.actionBtnTxt}>Press Me</Text>
           </View>
