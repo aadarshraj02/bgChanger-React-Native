@@ -11,7 +11,7 @@ const App = () => {
   return (
     <View>
       <StatusBar backgroundColor={'#000'} />
-      <View>
+      <View style={[styles.container]}>
         <TouchableOpacity>
           <View>
             <Text>Press Me</Text>
@@ -24,4 +24,10 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
